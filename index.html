@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poke Game</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Enemy -->
+      <div class="overlapping" id="overlappingDiv"></div>
+      <canvas></canvas>
+      <div class="interface" id="userInterface">
+        <div class="enemy__info">
+          <h1 class="enemy__name">Draggle</h1>
+          <div class="enemy__healthbar">
+            <div class="enemy__healthbar__full"></div>
+            <div class="enemy__healthbar__current" id="enemyHealthBar"></div>
+          </div>
+        </div>
+        <!-- Player -->
+        <div class="player__info">
+          <h1 class="player__name">Emby</h1>
+          <div class="player__healthbar">
+            <div class="player__healthbar__full"></div>
+            <div class="player__healthbar__current" id="playerHealthBar"></div>
+          </div>
+        </div>
+
+        <div class="battle__interface">
+          <div class="skill__dialog" id="dialogueBox"></div>
+          <div class="skills" id="skillsBox"></div>
+          <div class="skill__type">
+            <h2 id="skillType">Skill Type</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+      integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+      integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./data/audio.js"></script>
+    <script src="./data/battleZones.js"></script>
+    <script src="./data/collisions.js"></script>
+    <script src="./data/skills.js"></script>
+    <script src="./data/monsters.js"></script>
+    <script src="./js/classes.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/battleScene.js"></script>
+  </body>
+</html>
